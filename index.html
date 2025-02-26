@@ -3,65 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Sửa Chữa Laptop</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Sửa Chữa & Mua Bán Laptop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Sửa Chữa Laptop</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Trang Chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sanpham.html">Sản Phẩm</a></li>
-                    <li class="nav-item"><a class="nav-link" href="tintuc.html">Tin Tức</a></li>
-                    <li class="nav-item"><a class="nav-link" href="lienhe.html">Liên Hệ</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <div class="logo">Sửa Chữa Laptop</div>
+        <nav>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Sản Phẩm</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    <!-- Banner -->
-    <div class="container mt-4">
-        <div class="jumbotron text-center bg-primary text-white py-5">
-            <h1>Chuyên sửa chữa laptop uy tín</h1>
-            <p>Chúng tôi cung cấp dịch vụ sửa chữa nhanh chóng, chuyên nghiệp với giá tốt nhất.</p>
-            <a href="lienhe.html" class="btn btn-light">Liên Hệ Ngay</a>
-        </div>
-    </div>
+    <section class="banner">
+        <img src="banner.jpg" alt="Banner quảng cáo">
+    </section>
     
-    <!-- Dịch vụ -->
-    <div class="container mt-4">
-        <h2 class="text-center">Dịch Vụ Của Chúng Tôi</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <img src="repair-icon.png" class="img-fluid" alt="Sửa chữa">
-                <h4>Sửa Chữa Laptop</h4>
-                <p>Kiểm tra và sửa chữa laptop nhanh chóng.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="battery-icon.png" class="img-fluid" alt="Thay pin">
-                <h4>Thay Pin Laptop</h4>
-                <p>Thay thế pin laptop chính hãng, bảo hành dài hạn.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="upgrade-icon.png" class="img-fluid" alt="Nâng cấp">
-                <h4>Nâng Cấp Laptop</h4>
-                <p>Nâng cấp RAM, SSD giúp laptop chạy nhanh hơn.</p>
-            </div>
+    <section class="categories">
+        <h2>Danh Mục Sản Phẩm</h2>
+        <div class="category-list">
+            <div class="category">Laptop Cũ</div>
+            <div class="category">Linh Kiện</div>
+            <div class="category">Sửa Chữa</div>
         </div>
-    </div>
+    </section>
     
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2025 Sửa Chữa Laptop - All Rights Reserved</p>
+    <section class="products">
+        <h2>Sản Phẩm Nổi Bật</h2>
+        <div class="product-grid">
+            <div class="product">Laptop Dell XPS 13</div>
+            <div class="product">Laptop MacBook Pro</div>
+            <div class="product">Laptop Asus ROG</div>
+        </div>
+    </section>
+    
+    <section class="news">
+        <h2>Tin Tức Công Nghệ</h2>
+        <article>Bài viết về công nghệ mới nhất</article>
+    </section>
+    
+    <footer>
+        <p>Liên hệ: 0388728124 - Địa chỉ: 60/10 Tuệ Tĩnh, P.13, Q.11</p>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
