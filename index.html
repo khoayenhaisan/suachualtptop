@@ -3,51 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sửa Chữa & Mua Bán Laptop</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Cửa Hàng Laptop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+        .header {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .cart {
+            cursor: pointer;
+            font-size: 18px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .cart-count {
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 14px;
+            position: absolute;
+            top: -5px;
+            right: -10px;
+        }
+        .marquee {
+            width: 100%;
+            background-color: #ffcc00;
+            color: #000;
+            font-size: 20px;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+        .slideshow-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .slideshow-container img {
+            width: 50%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .left-slide {
+            order: -1;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product {
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #333;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Sửa Chữa Laptop</div>
-        <nav>
-            <ul>
-                <li><a href="#">Trang Chủ</a></li>
-                <li><a href="#">Sản Phẩm</a></li>
-                <li><a href="#">Tin Tức</a></li>
-                <li><a href="#">Liên Hệ</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="header">
+        Cửa Hàng Laptop
+    </div>
+    <div class="cart" onclick="viewCart()">🛒 Giỏ hàng <span class="cart-count">0</span></div>
+    <div class="marquee">
+        <marquee>Chào mừng đến với Cửa Hàng Laptop - Liên hệ: 0388728124</marquee>
+    </div>
+    <div class="slideshow-container">
+        <img src="store_left.jpg" class="slide left-slide">
+        <img src="store1.jpg" class="slide">
+        <img src="store2.jpg" class="slide">
+        <img src="store3.jpg" class="slide">
+    </div>
+    <h1>Danh Sách Laptop</h1>
+    <div class="product-container" id="product-list"></div>
     
-    <section class="banner">
-        <img src="banner.jpg" alt="Banner quảng cáo">
-    </section>
-    
-    <section class="categories">
-        <h2>Danh Mục Sản Phẩm</h2>
-        <div class="category-list">
-            <div class="category">Laptop Cũ</div>
-            <div class="category">Linh Kiện</div>
-            <div class="category">Sửa Chữa</div>
-        </div>
-    </section>
-    
-    <section class="products">
-        <h2>Sản Phẩm Nổi Bật</h2>
-        <div class="product-grid">
-            <div class="product">Laptop Dell XPS 13</div>
-            <div class="product">Laptop MacBook Pro</div>
-            <div class="product">Laptop Asus ROG</div>
-        </div>
-    </section>
-    
-    <section class="news">
-        <h2>Tin Tức Công Nghệ</h2>
-        <article>Bài viết về công nghệ mới nhất</article>
-    </section>
-    
-    <footer>
-        <p>Liên hệ: 0388728124 - Địa chỉ: 60/10 Tuệ Tĩnh, P.13, Q.11</p>
-    </footer>
+    <h1>Linh Kiện Laptop</h1>
+    <div class="product-container" id="accessory-list"></div>
 </body>
 </html>
