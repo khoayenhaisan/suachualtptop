@@ -3,78 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cửa Hàng Laptop</title>
+    <title>Laptop Giá Rẻ Nhất</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            background-color: #f4f4f4;
             text-align: center;
-            background-color: #222;
-            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .header {
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            font-size: 36px;
-            font-weight: bold;
-            text-transform: uppercase;
+        .container {
+            display: flex;
+            width: 90%;
         }
-        .cart {
-            cursor: pointer;
-            font-size: 18px;
-            position: absolute;
-            right: 20px;
-            top: 20px;
+        .main-content {
+            flex: 3;
         }
-        .cart-count {
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 2px 6px;
-            font-size: 14px;
-            position: absolute;
-            top: -5px;
-            right: -10px;
-        }
-        .marquee {
-            width: 100%;
-            background-color: #ffcc00;
-            color: #000;
-            font-size: 20px;
-            padding: 10px 0;
-            font-weight: bold;
+        .news-section {
+            flex: 1;
+            background-color: white;
+            padding: 10px;
+            margin-left: 10px;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+            text-align: left;
         }
         .slideshow-container {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             position: relative;
+            max-width: 95%;
+            margin: auto;
+            overflow: hidden;
         }
         .slideshow-container img {
-            width: 50%;
-            height: 300px;
+            width: 100%;
+            height: 250px;
             object-fit: cover;
-        }
-        .left-slide {
-            order: -1;
         }
         .product-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            padding: 20px;
         }
         .product {
-            width: 250px;
+            width: 220px;
+            margin: 10px;
             padding: 10px;
-            border: 1px solid #444;
-            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
             text-align: center;
-            background-color: #333;
         }
         .product img {
             width: 100%;
@@ -84,23 +60,55 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        Cửa Hàng Laptop
-    </div>
-    <div class="cart" onclick="viewCart()">🛒 Giỏ hàng <span class="cart-count">0</span></div>
-    <div class="marquee">
-        <marquee>Chào mừng đến với Cửa Hàng Laptop - Liên hệ: 0388728124</marquee>
-    </div>
-    <div class="slideshow-container">
-        <img src="store_left.jpg" class="slide left-slide">
-        <img src="store1.jpg" class="slide">
-        <img src="store2.jpg" class="slide">
-        <img src="store3.jpg" class="slide">
-    </div>
-    <h1>Danh Sách Laptop</h1>
-    <div class="product-container" id="product-list"></div>
+    <h1>Laptop Giá Rẻ Nhất</h1>
     
-    <h1>Linh Kiện Laptop</h1>
-    <div class="product-container" id="accessory-list"></div>
+    <div class="slideshow-container">
+        <img class="slide" src="store1.jpg" alt="Cửa hàng 1">
+        <img class="slide" src="store2.jpg" alt="Cửa hàng 2" style="display:none;">
+        <img class="slide" src="store3.jpg" alt="Cửa hàng 3" style="display:none;">
+    </div>
+    
+    <script>
+        let index = 0;
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            index++;
+            if (index > slides.length) {index = 1}
+            slides[index-1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+        showSlides();
+    </script>
+    
+    <div class="container">
+        <div class="main-content">
+            <div class="product-container">
+                <!-- 20 sản phẩm với hình ảnh rõ nét -->
+                <div class="product"><img src="laptop1.jpg" alt="Laptop 1"><p>Laptop 1</p></div>
+                <div class="product"><img src="laptop2.jpg" alt="Laptop 2"><p>Laptop 2</p></div>
+                <div class="product"><img src="laptop3.jpg" alt="Laptop 3"><p>Laptop 3</p></div>
+                <div class="product"><img src="laptop4.jpg" alt="Laptop 4"><p>Laptop 4</p></div>
+                <div class="product"><img src="laptop5.jpg" alt="Laptop 5"><p>Laptop 5</p></div>
+                <div class="product"><img src="laptop6.jpg" alt="Laptop 6"><p>Laptop 6</p></div>
+                <div class="product"><img src="laptop7.jpg" alt="Laptop 7"><p>Laptop 7</p></div>
+                <div class="product"><img src="laptop8.jpg" alt="Laptop 8"><p>Laptop 8</p></div>
+                <div class="product"><img src="laptop9.jpg" alt="Laptop 9"><p>Laptop 9</p></div>
+                <div class="product"><img src="laptop10.jpg" alt="Laptop 10"><p>Laptop 10</p></div>
+            </div>
+        </div>
+        <div class="news-section">
+            <h2>Tin Tức Mới Nhất</h2>
+            <ul>
+                <li><a href="#">Laptop chơi game giá rẻ 2025</a></li>
+                <li><a href="#">Hướng dẫn chọn laptop cho sinh viên</a></li>
+                <li><a href="#">Top 10 laptop đáng mua nhất hiện nay</a></li>
+                <li><a href="#">Cách bảo quản pin laptop tốt nhất</a></li>
+                <li><a href="#">Những lỗi thường gặp khi sử dụng laptop</a></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
